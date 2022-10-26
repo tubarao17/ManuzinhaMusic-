@@ -103,4 +103,4 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN"OTM0MTcxOTI2MjQ1NTM5ODQw.GTT_gr._lYpm6uby1_jRWQcEeUjrO6MfgPkZmpYGukltY");
