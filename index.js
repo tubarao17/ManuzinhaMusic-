@@ -39,15 +39,15 @@ player.on('trackAdd', (queue, track) => {
 });
 
 player.on('botDisconnect', queue => {
-  queue.metadata.send('❌ | I was manually disconnected from the voice channel, clearing queue!');
+  queue.metadata.send('❌ | Eu fui desconectado manualmente do canal de voz, limpando a fila!');
 });
 
 player.on('channelEmpty', queue => {
-  queue.metadata.send('❌ | Nobody is in the voice channel, leaving...');
+  queue.metadata.send('❌ | Ninguém está no canal de voz, deixando...');
 });
 
 player.on('queueEnd', queue => {
-  queue.metadata.send('✅ | Queue finished!');
+  queue.metadata.send('✅ | Fila concluída!');
 });
 
 client.once('ready', async () => {
@@ -77,10 +77,10 @@ client.on('messageCreate', async message => {
     await message.guild.commands
       .set(client.commands)
       .then(() => {
-        message.reply('Deployed!');
+        message.reply('Implantado!');
       })
       .catch(err => {
-        message.reply('Could not deploy commands! Make sure the bot has the application.commands permission!');
+        message.reply('Não foi possível implantar comandos! Certifique-se de que o bot tenha o aplicativo.!');
         console.error(err);
       });
   }
@@ -98,7 +98,7 @@ client.on('interactionCreate', async interaction => {
   } catch (error) {
     console.error(error);
     interaction.followUp({
-      content: 'There was an error trying to execute that command!',
+      content: 'Ocorreu um erro ao tentar executar esse comando!',
     });
   }
 });
